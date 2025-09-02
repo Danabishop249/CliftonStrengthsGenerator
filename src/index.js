@@ -30,9 +30,6 @@ function generateCS(event) {
 
   strengthsElement.innerHTML = `<div id="loading-msg" class="blink">Generating Clifton Strengths Thought of the Day for your strength ${instructionsInput.value}...</div>
 `;
-  console.log("generating Clifton Strengths thought");
-  console.log(`prompt: ${prompt}`);
-  console.log(`context: ${context}`);
 
   //build the call to api (axios)
 
