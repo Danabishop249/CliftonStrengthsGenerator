@@ -25,6 +25,11 @@ function generateCS(event) {
     "You are an expert on all Clifton Strengths.  Your mission is to generate a thought of the day for a Clifton Strengths word that a person can use to improve their strengths. Make sure to follow User instrutions. Sign the results with SheCodes AI inside a <strong> element";
   let apiurl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apikey}`;
 
+  let strengthsElement = document.querySelector("#strengths");
+  strengthsElement.classList.remove("hidden");
+
+  strengthsElement.innerHTML = `<div id="loading-msg" class="blink">Generating Clifton Strengths Thought of the Day for your strength ${instructionsInput.value}...</div>
+`;
   console.log("generating Clifton Strengths thought");
   console.log(`prompt: ${prompt}`);
   console.log(`context: ${context}`);
